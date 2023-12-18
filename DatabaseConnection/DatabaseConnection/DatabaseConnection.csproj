@@ -52,12 +52,12 @@
         <Compile Include="DatabaseQueryForm.Designer.cs">
             <DependentUpon>DatabaseQueryForm.cs</DependentUpon>
         </Compile>
+        <Compile Include="Interfaces\IComboBoxStringRep.cs" />
         <Compile Include="Models\Korisnik.cs" />
         <Compile Include="Models\Lokacija.cs" />
         <Compile Include="Models\MT.cs" />
         <Compile Include="Models\Oprema.cs" />
         <Compile Include="Models\RIF.cs" />
-        <Compile Include="Models\TableColumnConstants.cs" />
         <Compile Include="Models\Zaduzenja.cs" />
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>

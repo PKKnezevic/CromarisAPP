@@ -1,8 +1,9 @@
 ﻿using System;
+using DatabaseConnection.Interfaces;
 
 namespace DatabaseConnection.Models
 {
-    public class Oprema
+    public class Oprema : IComboBoxStringRep
     {
         public int InterniBroj { get; set; }
         public int SerijskiBroj { get; set; }
@@ -15,5 +16,10 @@ namespace DatabaseConnection.Models
         public DateTime DAT_primke { get; set; }
         public string IP_adresa { get; set; }
         public DateTime DAT_zaprimanja { get; set; }
+
+        public string GetStringRepOfClass()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

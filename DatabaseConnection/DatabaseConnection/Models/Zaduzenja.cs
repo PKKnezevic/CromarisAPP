@@ -1,8 +1,9 @@
 ﻿using System;
+using DatabaseConnection.Interfaces;
 
 namespace DatabaseConnection.Models
 {
-    public class Zaduzenja
+    public class Zaduzenja : IComboBoxStringRep
     {
         public int KadrovskiBroj { get; set; }
         public int InterniBrojOpreme { get; set; }
@@ -12,5 +13,10 @@ namespace DatabaseConnection.Models
         public int ZAD_ID { get; set; }
         public int IMT { get; set; }
         public int RIF { get; set; }
+
+        public string GetStringRepOfClass()
+        {
+            return "Zaduzenja";
+        }
     }
 }

@@ -37,29 +37,33 @@ namespace DatabaseConnection
 
             this.connectionButton = new System.Windows.Forms.Button();
             this.databaseTables = new System.Windows.Forms.ComboBox();
+            this.tablePanel = new System.Windows.Forms.Panel();
             
             this.SuspendLayout();
             
-            this.connectionButton.Location = new System.Drawing.Point(628, 377);
+            this.connectionButton.Location = new System.Drawing.Point(600, 750);
             this.connectionButton.Name = "connectionButton";
-            this.connectionButton.Size = new System.Drawing.Size(160, 61);
+            this.connectionButton.Size = new System.Drawing.Size(160, 60);
             this.connectionButton.TabIndex = 0;
             this.connectionButton.Text = "ConnectToTable";
             this.connectionButton.UseVisualStyleBackColor = true;
             this.connectionButton.Click += new System.EventHandler(this.ConnectionButtonClick);
             
-            this.databaseTables.Location = new System.Drawing.Point(628, 340);
+            this.databaseTables.Location = new System.Drawing.Point(600, 700);
             this.databaseTables.Name = "databaseTables";
             this.databaseTables.Size = new System.Drawing.Size(160, 25);
             this.databaseTables.Items.AddRange(tableItems);
             
-            //this.AutoScaleDimensions = new System.Drawing.SizeF(8D, 16D);
+            #warning 
+            this.tablePanel = null;
+
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 850);
             this.Controls.Add(this.databaseTables);
             this.Controls.Add(this.connectionButton);
             this.Name = "DatabaseQueryForm";
-            this.Text = "Form1";
+            this.Text = "OsnovnaSredstva";
             this.ResumeLayout(false);
         }
 
@@ -68,6 +72,7 @@ namespace DatabaseConnection
         
         //Button which handles connecting to the database
         private System.Windows.Forms.Button connectionButton;
+        private System.Windows.Forms.Panel tablePanel;
 
         #endregion
     }
