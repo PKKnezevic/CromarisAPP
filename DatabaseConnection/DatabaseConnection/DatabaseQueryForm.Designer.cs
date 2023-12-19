@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
+using DatabaseConnection.Models;
 
 namespace DatabaseConnection
 {
@@ -39,15 +41,25 @@ namespace DatabaseConnection
             this.connectionButton = new System.Windows.Forms.Button();
             this.databaseTables = new System.Windows.Forms.ComboBox();
             this.tablePanel = new System.Windows.Forms.Panel();
+            this.databaseView = new DataGridView();
+            this.addNewEleButton = new Button();
             
             this.SuspendLayout();
-            
+
+            this.addNewEleButton.Location = new Point(25, 750);
+            this.addNewEleButton.Size = new Size(150, 50);
+            this.addNewEleButton.Name = "addNewEleButton";
+            this.addNewEleButton.Text = "Dodaj zapis";
+            this.addNewEleButton.Anchor = AnchorStyles.Left;
+            this.addNewEleButton.Click += new System.EventHandler(this.AddNewEleButtonOnClick);
+                
             // Connection button specifics
             this.connectionButton.Location = new System.Drawing.Point(600, 750);
             this.connectionButton.Name = "connectionButton";
-            this.connectionButton.Size = new System.Drawing.Size(160, 60);
+            this.connectionButton.Size = new System.Drawing.Size(150, 50);
+            this.connectionButton.Anchor = AnchorStyles.Right;
             this.connectionButton.TabIndex = 0;
-            this.connectionButton.Text = "ConnectToTable";
+            this.connectionButton.Text = "Spoji na tablicu";
             this.connectionButton.UseVisualStyleBackColor = true;
             this.connectionButton.Click += new System.EventHandler(this.ConnectionButtonClick);
             
@@ -55,15 +67,19 @@ namespace DatabaseConnection
             this.databaseTables.Location = new System.Drawing.Point(600, 700);
             this.databaseTables.Name = "databaseTables";
             this.databaseTables.Size = new System.Drawing.Size(160, 25);
+            this.databaseTables.Anchor = AnchorStyles.Right;
             this.databaseTables.Items.AddRange(tableItems);
 
             // Window panel which contains the table elements for showing each table from the database
             this.tablePanel.Location = new System.Drawing.Point(25, 10);
-            this.tablePanel.Size = new System.Drawing.Size(500, 790);
+            this.tablePanel.Size = new System.Drawing.Size(250, 790);
             this.tablePanel.Dock = DockStyle.Fill;
             this.tablePanel.AutoScroll = true;
-            this.tablePanel.AutoSize = false;
             
+            
+            this.databaseView.Parent = tablePanel;
+            this.databaseView.Dock = DockStyle.Top;
+            this.databaseView.Size = new Size(250, 650);
             
             // Adding everything to the window
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -80,9 +96,11 @@ namespace DatabaseConnection
         //Database tables
         private ComboBox databaseTables;
         
-        //Button which handles connecting to the database
+        //List of all the elements on the window
         private System.Windows.Forms.Button connectionButton;
         private System.Windows.Forms.Panel tablePanel;
+        private System.Windows.Forms.DataGridView databaseView;
+        private System.Windows.Forms.Button addNewEleButton;
 
         #endregion
     }
