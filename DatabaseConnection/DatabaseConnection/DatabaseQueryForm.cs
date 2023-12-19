@@ -21,28 +21,28 @@ namespace DatabaseConnection
             SqlConnection con = new SqlConnection(connstring);
             con.Open();
             //Console.Write("This is the selected table: " + databaseTables.SelectedItem);
-            string columnName = "SELECT count(*) as No_of_Column FROM information_schema.columns WHERE table_name ='"+databaseTables.SelectedItem+"'";
+            //string columnName = "SELECT count(*) as No_of_Column FROM information_schema.columns WHERE table_name ='"+databaseTables.SelectedItem+"'";
             string query = "Select * from " + databaseTables.SelectedItem;
             
             //Obtaining number of columns
-            SqlCommand columns = OperateCommand(columnName, con);
-            SqlDataReader columnReader = columns.ExecuteReader();
-            var columnCount=0;
-            while (columnReader.Read())
-            { 
-                columnCount = columnReader.GetInt32(0);
-            }
+            //SqlCommand columns = OperateCommand(columnName, con);
+            //SqlDataReader columnReader = columns.ExecuteReader();
+            //var columnCount=0;
+            //while (columnReader.Read())
+            //{ 
+            //    columnCount = columnReader.GetInt32(0);
+            //}
             
-            columnReader.Close();
+            //columnReader.Close();
             
             //Execute the given command
+            SqlDataAdapter 
             SqlCommand cmd = OperateCommand(query, con);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
                 Console.WriteLine(reader.GetValue(1));
             }
-            
             
             con.Close();
         }

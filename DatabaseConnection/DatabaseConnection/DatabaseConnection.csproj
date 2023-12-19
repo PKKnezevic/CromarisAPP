@@ -52,6 +52,7 @@
         <Compile Include="DatabaseQueryForm.Designer.cs">
             <DependentUpon>DatabaseQueryForm.cs</DependentUpon>
         </Compile>
+        <Compile Include="FormClassElements\DatabaseTable.cs" />
         <Compile Include="Interfaces\IComboBoxStringRep.cs" />
         <Compile Include="Models\Korisnik.cs" />
         <Compile Include="Models\Lokacija.cs" />
