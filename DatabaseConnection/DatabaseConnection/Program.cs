@@ -13,7 +13,7 @@ namespace DatabaseConnection
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DatabaseQueryForm());
+            Application.Run(new DatabaseTableQuery());
         }
     }
 }

@@ -6,18 +6,16 @@ using DatabaseConnection.AddElementForms;
 
 namespace DatabaseConnection
 {
-    public partial class DatabaseQueryForm : Form
+    public partial class DatabaseTableQuery : Form
     {
-        //string connectionString = "Data Source = 10.100.1.162\\BIZERBA;Initial Catalog=OSNOVNA_SREDSTVA;Integrated security=false;user=OS_API;password=TvornicaRibe!.99";
-        //SELECT count(*) as No_of_Column FROM information_schema.columns WHERE table_name ='geeksforgeeks';
         private SqlConnection con;
-
-        public DatabaseQueryForm()
+        
+        public DatabaseTableQuery()
         {
             InitializeComponent();
         }
 
-        private void ConnectionButtonClick(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             var connstring =
                 "Data Source = 10.100.1.162\\BIZERBA;Initial Catalog=OSNOVNA_SREDSTVA;Integrated security=false;user=OS_API;password=TvornicaRibe!.99";
@@ -30,20 +28,13 @@ namespace DatabaseConnection
             var dataTable = new DataTable(databaseTables.SelectedItem.ToString());
             adapter.Fill(dataTable);
             databaseView.DataSource = dataTable;
-            var cmd = OperateCommand(query, con);
-            var reader = cmd.ExecuteReader();
-            while (reader.Read()) Console.WriteLine(reader.GetValue(1));
-        }
-
-        private SqlCommand OperateCommand(string query, SqlConnection connection)
-        {
-            return new SqlCommand(query, connection);
         }
 
 
-        private void AddNewEleButtonOnClick(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             var userForm = new TableFormUser();
+            userForm.Visible = true;
             userForm.SetConnection(con);
         }
     }
