@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using DatabaseConnection.AddElementForms;
+using DatabaseConnection.Interfaces;
 
 namespace DatabaseConnection
 {
@@ -15,7 +16,7 @@ namespace DatabaseConnection
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void connectToDB_Click(object sender, EventArgs e)
         {
             var connstring =
                 "Data Source = 10.100.1.162\\BIZERBA;Initial Catalog=OSNOVNA_SREDSTVA;Integrated security=false;user=OS_API;password=TvornicaRibe!.99";
@@ -31,11 +32,19 @@ namespace DatabaseConnection
         }
 
 
-        private void button2_Click(object sender, EventArgs e)
+        private void addEntry_Click(object sender, EventArgs e)
         {
-            var userForm = new TableFormUser();
-            userForm.Visible = true;
-            userForm.SetConnection(con);
+            ITableInteraction entryForm;
+            switch (databaseTables.SelectedItem.ToString())
+            {
+                case "Korisnik":
+                    entryForm = new TableFormUser();
+                    break;
+                case "Lokacija":
+                    
+            }
+            entryForm.Visible = true;
+            entryForm.SetConnection(con);
         }
     }
 }

@@ -52,12 +52,6 @@
         <Compile Include="AddElementForms\TableFormUser.Designer.cs">
           <DependentUpon>TableFormUser.cs</DependentUpon>
         </Compile>
-        <Compile Include="DatabaseQueryForm.cs">
-            <SubType>Form</SubType>
-        </Compile>
-        <Compile Include="DatabaseQueryForm.Designer.cs">
-            <DependentUpon>DatabaseQueryForm.cs</DependentUpon>
-        </Compile>
         <Compile Include="DatabaseTableQuery.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -76,9 +70,6 @@
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <EmbeddedResource Include="AddElementForms\TableFormUser.resx">
           <DependentUpon>TableFormUser.cs</DependentUpon>
-        </EmbeddedResource>
-        <EmbeddedResource Include="DatabaseQueryForm.resx">
-          <DependentUpon>DatabaseQueryForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="DatabaseTableQuery.resx">
           <DependentUpon>DatabaseTableQuery.cs</DependentUpon>

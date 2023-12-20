@@ -12,7 +12,6 @@ C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\Database
 C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\DatabaseConnection\bin\Debug\DatabaseConnection.exe
 C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\DatabaseConnection\bin\Debug\DatabaseConnection.pdb
 C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\DatabaseConnection\obj\Debug\DatabaseConnection.csproj.AssemblyReference.cache
-C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\DatabaseConnection\obj\Debug\DatabaseConnection.DatabaseQueryForm.resources
 C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\DatabaseConnection\obj\Debug\DatabaseConnection.Properties.Resources.resources
 C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\DatabaseConnection\obj\Debug\DatabaseConnection.csproj.GenerateResource.cache
 C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\DatabaseConnection\obj\Debug\DatabaseConnection.csproj.CoreCompileInputs.cache

@@ -33,9 +33,9 @@ namespace DatabaseConnection
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.databaseView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.connectToDB = new System.Windows.Forms.Button();
             this.databaseTables = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.addEntry = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.databaseView)).BeginInit();
             this.SuspendLayout();
@@ -58,15 +58,15 @@ namespace DatabaseConnection
             this.databaseView.Size = new System.Drawing.Size(776, 408);
             this.databaseView.TabIndex = 0;
             // 
-            // button1
+            // connectToDB
             // 
-            this.button1.Location = new System.Drawing.Point(667, 511);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 39);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Spoji tablicu";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.connectToDB.Location = new System.Drawing.Point(667, 511);
+            this.connectToDB.Name = "connectToDB";
+            this.connectToDB.Size = new System.Drawing.Size(121, 39);
+            this.connectToDB.TabIndex = 1;
+            this.connectToDB.Text = "Spoji tablicu";
+            this.connectToDB.UseVisualStyleBackColor = true;
+            this.connectToDB.Click += new System.EventHandler(this.connectToDB_Click);
             // 
             // databaseTables
             // 
@@ -77,24 +77,24 @@ namespace DatabaseConnection
             this.databaseTables.Size = new System.Drawing.Size(121, 24);
             this.databaseTables.TabIndex = 2;
             // 
-            // button2
+            // addEntry
             // 
-            this.button2.Location = new System.Drawing.Point(12, 511);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 39);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Dodaj zapis";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.addEntry.Location = new System.Drawing.Point(12, 511);
+            this.addEntry.Name = "addEntry";
+            this.addEntry.Size = new System.Drawing.Size(100, 39);
+            this.addEntry.TabIndex = 3;
+            this.addEntry.Text = "Dodaj zapis";
+            this.addEntry.UseVisualStyleBackColor = true;
+            this.addEntry.Click += new System.EventHandler(this.addEntry_Click);
             // 
             // DatabaseTableQuery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 562);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.addEntry);
             this.Controls.Add(this.databaseTables);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.connectToDB);
             this.Controls.Add(this.panel1);
             this.Name = "DatabaseTableQuery";
             this.Text = "DatabaseTableQuery";
@@ -103,9 +103,9 @@ namespace DatabaseConnection
             this.ResumeLayout(false);
         }
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button addEntry;
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button connectToDB;
         private System.Windows.Forms.ComboBox databaseTables;
 
         private System.Windows.Forms.Panel panel1;
