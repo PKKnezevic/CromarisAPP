@@ -34,16 +34,16 @@ namespace DatabaseConnection
 
         private void addEntry_Click(object sender, EventArgs e)
         {
-            ITableInteraction entryForm;
+            TableInteraction entryForm = null;
             switch (databaseTables.SelectedItem.ToString())
             {
                 case "Korisnik":
                     entryForm = new TableFormUser();
                     break;
                 case "Lokacija":
-                    
+                    entryForm = new TableFormLocation();
+                    break;
             }
-            entryForm.Visible = true;
             entryForm.SetConnection(con);
         }
     }

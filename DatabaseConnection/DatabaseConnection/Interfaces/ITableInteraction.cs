@@ -1,7 +1,16 @@
-﻿namespace DatabaseConnection.Interfaces
+﻿using System.Data.SqlClient;
+using System.Windows.Forms;
+
+namespace DatabaseConnection.Interfaces
 {
-    public interface ITableInteraction
+    public abstract class TableInteraction : Form
     {
-        void AddElementsToTable();
+        private SqlConnection _connection;
+
+        protected void SetConnection(SqlConnection connection)
+        {
+            _connection = connection;
+        }
+        public abstract void AddElementsToTable(SqlCommand sqlCommand);
     }
 }
