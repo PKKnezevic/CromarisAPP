@@ -22,3 +22,4 @@ C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\Database
 C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\DatabaseConnection\obj\Debug\DatabaseConnection.AddElementForms.TableFormLocation.resources
 C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\DatabaseConnection\obj\Debug\DatabaseConnection.AddElementForms.TableFormRIF.resources
 C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\DatabaseConnection\obj\Debug\DatabaseConnection.AddElementForms.TableFormMT.resources
+C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\DatabaseConnection\obj\Debug\DatabaseConnection.AddElementForms.TableFormOprema.resources

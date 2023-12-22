@@ -58,6 +58,12 @@
         <Compile Include="AddElementForms\TableFormMT.Designer.cs">
           <DependentUpon>TableFormMT.cs</DependentUpon>
         </Compile>
+        <Compile Include="AddElementForms\TableFormOprema.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="AddElementForms\TableFormOprema.Designer.cs">
+          <DependentUpon>TableFormOprema.cs</DependentUpon>
+        </Compile>
         <Compile Include="AddElementForms\TableFormRIF.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -91,6 +97,9 @@
         </EmbeddedResource>
         <EmbeddedResource Include="AddElementForms\TableFormMT.resx">
           <DependentUpon>TableFormMT.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="AddElementForms\TableFormOprema.resx">
+          <DependentUpon>TableFormOprema.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="AddElementForms\TableFormRIF.resx">
           <DependentUpon>TableFormRIF.cs</DependentUpon>
