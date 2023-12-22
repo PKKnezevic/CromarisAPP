@@ -34,8 +34,8 @@ namespace DatabaseConnection.AddElementForms
             this.AddLocation = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.IDBox = new System.Windows.Forms.TextBox();
+            this.NameBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // AddLocation
@@ -68,40 +68,40 @@ namespace DatabaseConnection.AddElementForms
             this.label2.Text = "Naziv:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox1
+            // IDBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox1.Location = new System.Drawing.Point(130, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(115, 36);
-            this.textBox1.TabIndex = 3;
+            this.IDBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.IDBox.Location = new System.Drawing.Point(130, 29);
+            this.IDBox.Name = "IDBox";
+            this.IDBox.Size = new System.Drawing.Size(115, 36);
+            this.IDBox.TabIndex = 3;
             // 
-            // textBox2
+            // NameBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.textBox2.Location = new System.Drawing.Point(130, 76);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(113, 36);
-            this.textBox2.TabIndex = 4;
+            this.NameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.NameBox.Location = new System.Drawing.Point(130, 76);
+            this.NameBox.Name = "NameBox";
+            this.NameBox.Size = new System.Drawing.Size(113, 36);
+            this.NameBox.TabIndex = 4;
             // 
             // TableFormLocation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 253);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(307, 253);
+            this.Controls.Add(this.NameBox);
+            this.Controls.Add(this.IDBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AddLocation);
             this.Name = "TableFormLocation";
-            this.Text = "DodajLokaciju";
+            this.Text = "Lokacija";
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox IDBox;
+        private System.Windows.Forms.TextBox NameBox;
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

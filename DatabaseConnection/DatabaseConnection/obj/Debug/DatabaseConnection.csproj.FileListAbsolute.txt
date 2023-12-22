@@ -20,3 +20,4 @@ C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\Database
 C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\DatabaseConnection\obj\Debug\DatabaseConnection.AddElementForms.TableFormUser.resources
 C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\DatabaseConnection\obj\Debug\DatabaseConnection.DatabaseTableQuery.resources
 C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\DatabaseConnection\obj\Debug\DatabaseConnection.AddElementForms.TableFormLocation.resources
+C:\Users\petar.knezevic\Documents\GitHub\CromarisAPP\DatabaseConnection\DatabaseConnection\obj\Debug\DatabaseConnection.AddElementForms.TableFormRIF.resources

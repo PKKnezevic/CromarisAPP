@@ -34,7 +34,7 @@ namespace DatabaseConnection
 
         private void addEntry_Click(object sender, EventArgs e)
         {
-            TableInteraction entryForm = null;
+            ITableInterface entryForm = null;
             switch (databaseTables.SelectedItem.ToString())
             {
                 case "Korisnik":
@@ -42,6 +42,9 @@ namespace DatabaseConnection
                     break;
                 case "Lokacija":
                     entryForm = new TableFormLocation();
+                    break;
+                case "RIF":
+                    entryForm = new TableFormRIF();
                     break;
             }
             entryForm.SetConnection(con);

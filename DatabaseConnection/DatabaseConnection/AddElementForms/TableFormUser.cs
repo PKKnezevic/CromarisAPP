@@ -5,12 +5,14 @@ using DatabaseConnection.Interfaces;
 
 namespace DatabaseConnection.AddElementForms
 {
-    public partial class TableFormUser : Form, TableInteraction
+    public partial class TableFormUser : Form, ITableInterface
     {
+        private SqlConnection _connection;
         
         public TableFormUser()
         {
             InitializeComponent();
+            Show(Parent);
         }
         
         private void SendDataToKorisnik_Click(object sender, EventArgs e)
@@ -28,9 +30,16 @@ namespace DatabaseConnection.AddElementForms
             IDBox.Text = "";
         }
 
+        public void SetConnection(SqlConnection connection)
+        {
+            _connection = connection;
+        }
+
         public void AddElementsToTable(SqlCommand sqlCommand)
         {
-            
+            sqlCommand.Parameters.AddWithValue("@Value1", IDBox.Text);
+            sqlCommand.Parameters.AddWithValue("@Value2", NameBox.Text);
+            sqlCommand.ExecuteNonQuery();
         }
     }
 }

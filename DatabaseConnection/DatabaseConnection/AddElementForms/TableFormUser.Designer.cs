@@ -89,7 +89,7 @@ namespace DatabaseConnection.AddElementForms
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.NameBox);
             this.Name = "TableFormUser";
-            this.Text = "TableForm";
+            this.Text = "Korisnik";
             this.ResumeLayout(false);
             this.PerformLayout();
         }

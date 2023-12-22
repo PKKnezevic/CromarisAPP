@@ -52,6 +52,12 @@
         <Compile Include="AddElementForms\TableFormLocation.Designer.cs">
           <DependentUpon>TableFormLocation.cs</DependentUpon>
         </Compile>
+        <Compile Include="AddElementForms\TableFormRIF.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="AddElementForms\TableFormRIF.Designer.cs">
+          <DependentUpon>TableFormRIF.cs</DependentUpon>
+        </Compile>
         <Compile Include="AddElementForms\TableFormUser.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -65,7 +71,7 @@
           <DependentUpon>DatabaseTableQuery.cs</DependentUpon>
         </Compile>
         <Compile Include="Interfaces\IComboBoxStringRep.cs" />
-        <Compile Include="Interfaces\TableInteraction.cs" />
+        <Compile Include="Interfaces\ITableInterface.cs" />
         <Compile Include="Models\Korisnik.cs" />
         <Compile Include="Models\Lokacija.cs" />
         <Compile Include="Models\MT.cs" />
@@ -76,6 +82,9 @@
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <EmbeddedResource Include="AddElementForms\TableFormLocation.resx">
           <DependentUpon>TableFormLocation.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="AddElementForms\TableFormRIF.resx">
+          <DependentUpon>TableFormRIF.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="AddElementForms\TableFormUser.resx">
           <DependentUpon>TableFormUser.cs</DependentUpon>
