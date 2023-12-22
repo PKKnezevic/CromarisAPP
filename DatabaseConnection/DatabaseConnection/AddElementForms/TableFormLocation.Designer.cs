@@ -40,9 +40,10 @@ namespace DatabaseConnection.AddElementForms
             // 
             // AddLocation
             // 
-            this.AddLocation.Location = new System.Drawing.Point(82, 190);
+            this.AddLocation.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AddLocation.Location = new System.Drawing.Point(0, 213);
             this.AddLocation.Name = "AddLocation";
-            this.AddLocation.Size = new System.Drawing.Size(112, 40);
+            this.AddLocation.Size = new System.Drawing.Size(307, 40);
             this.AddLocation.TabIndex = 0;
             this.AddLocation.Text = "Dodaj";
             this.AddLocation.UseVisualStyleBackColor = true;

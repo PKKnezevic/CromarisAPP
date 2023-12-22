@@ -44,10 +44,11 @@ namespace DatabaseConnection.AddElementForms
             // 
             // AddUser
             // 
+            this.AddUser.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.AddUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.AddUser.Location = new System.Drawing.Point(130, 286);
+            this.AddUser.Location = new System.Drawing.Point(0, 298);
             this.AddUser.Name = "AddUser";
-            this.AddUser.Size = new System.Drawing.Size(115, 55);
+            this.AddUser.Size = new System.Drawing.Size(382, 55);
             this.AddUser.TabIndex = 0;
             this.AddUser.Text = "Dodaj";
             this.AddUser.UseVisualStyleBackColor = true;

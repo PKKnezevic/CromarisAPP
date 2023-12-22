@@ -46,6 +46,9 @@ namespace DatabaseConnection
                 case "RIF":
                     entryForm = new TableFormRIF();
                     break;
+                case "MT":
+                    entryForm = new TableFormMT();
+                    break;
             }
             entryForm.SetConnection(con);
         }

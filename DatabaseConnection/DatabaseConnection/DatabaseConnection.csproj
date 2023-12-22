@@ -52,6 +52,12 @@
         <Compile Include="AddElementForms\TableFormLocation.Designer.cs">
           <DependentUpon>TableFormLocation.cs</DependentUpon>
         </Compile>
+        <Compile Include="AddElementForms\TableFormMT.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="AddElementForms\TableFormMT.Designer.cs">
+          <DependentUpon>TableFormMT.cs</DependentUpon>
+        </Compile>
         <Compile Include="AddElementForms\TableFormRIF.cs">
           <SubType>Form</SubType>
         </Compile>
@@ -82,6 +88,9 @@
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <EmbeddedResource Include="AddElementForms\TableFormLocation.resx">
           <DependentUpon>TableFormLocation.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="AddElementForms\TableFormMT.resx">
+          <DependentUpon>TableFormMT.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="AddElementForms\TableFormRIF.resx">
           <DependentUpon>TableFormRIF.cs</DependentUpon>

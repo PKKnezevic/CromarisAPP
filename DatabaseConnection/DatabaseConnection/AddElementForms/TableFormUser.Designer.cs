@@ -40,40 +40,44 @@ namespace DatabaseConnection.AddElementForms
             // 
             // NameBox
             // 
-            this.NameBox.Location = new System.Drawing.Point(130, 35);
+            this.NameBox.Location = new System.Drawing.Point(175, 35);
             this.NameBox.Name = "NameBox";
             this.NameBox.Size = new System.Drawing.Size(120, 22);
             this.NameBox.TabIndex = 0;
             // 
             // nameLabel
             // 
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.nameLabel.Location = new System.Drawing.Point(12, 35);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(112, 23);
+            this.nameLabel.Size = new System.Drawing.Size(157, 23);
             this.nameLabel.TabIndex = 1;
             this.nameLabel.Text = "Prezime,Ime:";
+            this.nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // idLabel
             // 
+            this.idLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.idLabel.Location = new System.Drawing.Point(12, 76);
             this.idLabel.Name = "idLabel";
-            this.idLabel.Size = new System.Drawing.Size(112, 27);
+            this.idLabel.Size = new System.Drawing.Size(157, 27);
             this.idLabel.TabIndex = 2;
             this.idLabel.Text = "Kadrovski Broj:";
+            this.idLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // IDBox
             // 
-            this.IDBox.Location = new System.Drawing.Point(130, 73);
+            this.IDBox.Location = new System.Drawing.Point(175, 76);
             this.IDBox.Name = "IDBox";
             this.IDBox.Size = new System.Drawing.Size(120, 22);
             this.IDBox.TabIndex = 3;
             // 
             // SendDataToKorisnik
             // 
-            this.SendDataToKorisnik.Location = new System.Drawing.Point(78, 152);
+            this.SendDataToKorisnik.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.SendDataToKorisnik.Location = new System.Drawing.Point(0, 130);
             this.SendDataToKorisnik.Name = "SendDataToKorisnik";
-            this.SendDataToKorisnik.Size = new System.Drawing.Size(140, 53);
+            this.SendDataToKorisnik.Size = new System.Drawing.Size(307, 53);
             this.SendDataToKorisnik.TabIndex = 4;
             this.SendDataToKorisnik.Text = "Dodaj";
             this.SendDataToKorisnik.UseVisualStyleBackColor = true;
@@ -82,7 +86,7 @@ namespace DatabaseConnection.AddElementForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 253);
+            this.ClientSize = new System.Drawing.Size(307, 183);
             this.Controls.Add(this.SendDataToKorisnik);
             this.Controls.Add(this.IDBox);
             this.Controls.Add(this.idLabel);
