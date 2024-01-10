@@ -1,4 +1,6 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace DatabaseConnection.AddElementForms
 {
@@ -32,151 +34,302 @@ namespace DatabaseConnection.AddElementForms
         private void InitializeComponent()
         {
             this.AddGear = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.InternalLabel = new System.Windows.Forms.Label();
+            this.SerialLabel = new System.Windows.Forms.Label();
+            this.ProviderLabel = new System.Windows.Forms.Label();
+            this.RIFLabel = new System.Windows.Forms.Label();
+            this.SAPNameLabel = new System.Windows.Forms.Label();
+            this.CodeLabel = new System.Windows.Forms.Label();
+            this.DateActivationLabel = new System.Windows.Forms.Label();
+            this.FondLabel = new System.Windows.Forms.Label();
+            this.ReceivingLabel = new System.Windows.Forms.Label();
+            this.IPLabel = new System.Windows.Forms.Label();
+            this.ReceivingDateLabel = new System.Windows.Forms.Label();
+            this.InternalBox = new System.Windows.Forms.TextBox();
+            this.ActivationDateBox = new System.Windows.Forms.TextBox();
+            this.SAPCodeBox = new System.Windows.Forms.TextBox();
+            this.SAPNameBox = new System.Windows.Forms.TextBox();
+            this.RIFBox = new System.Windows.Forms.TextBox();
+            this.ProviderBox = new System.Windows.Forms.TextBox();
+            this.SerialBox = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ReceivingDateBox = new System.Windows.Forms.TextBox();
+            this.RecivingBox = new System.Windows.Forms.TextBox();
+            this.IPBox = new System.Windows.Forms.TextBox();
+            this._boxElements = new List<TextBox>();
             this.SuspendLayout();
             // 
             // AddGear
             // 
             this.AddGear.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.AddGear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.AddGear.Location = new System.Drawing.Point(0, 499);
+            this.AddGear.Location = new System.Drawing.Point(0, 430);
             this.AddGear.Name = "AddGear";
             this.AddGear.Size = new System.Drawing.Size(782, 54);
             this.AddGear.TabIndex = 0;
             this.AddGear.Text = "Dodaj";
             this.AddGear.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // InternalLabel
             // 
-            this.label1.Location = new System.Drawing.Point(74, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
+            this.InternalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.InternalLabel.Location = new System.Drawing.Point(10, 30);
+            this.InternalLabel.Name = "InternalLabel";
+            this.InternalLabel.Size = new System.Drawing.Size(138, 23);
+            this.InternalLabel.TabIndex = 1;
+            this.InternalLabel.Text = "Interni Broj:";
+            this.InternalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label2
+            // SerialLabel
             // 
-            this.label2.Location = new System.Drawing.Point(171, 172);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "label2";
+            this.SerialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SerialLabel.Location = new System.Drawing.Point(10, 75);
+            this.SerialLabel.Name = "SerialLabel";
+            this.SerialLabel.Size = new System.Drawing.Size(138, 23);
+            this.SerialLabel.TabIndex = 2;
+            this.SerialLabel.Text = "Serijski Broj:";
+            this.SerialLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label3
+            // ProviderLabel
             // 
-            this.label3.Location = new System.Drawing.Point(118, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 23);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "label3";
+            this.ProviderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ProviderLabel.Location = new System.Drawing.Point(10, 120);
+            this.ProviderLabel.Name = "ProviderLabel";
+            this.ProviderLabel.Size = new System.Drawing.Size(138, 23);
+            this.ProviderLabel.TabIndex = 3;
+            this.ProviderLabel.Text = "Dobavljac:";
+            this.ProviderLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label4
+            // RIFLabel
             // 
-            this.label4.Location = new System.Drawing.Point(135, 282);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 23);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "label4";
+            this.RIFLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.RIFLabel.Location = new System.Drawing.Point(10, 165);
+            this.RIFLabel.Name = "RIFLabel";
+            this.RIFLabel.Size = new System.Drawing.Size(138, 23);
+            this.RIFLabel.TabIndex = 4;
+            this.RIFLabel.Text = "RIF ID:";
+            this.RIFLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label5
+            // SAPNameLabel
             // 
-            this.label5.Location = new System.Drawing.Point(232, 363);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(100, 23);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "label5";
+            this.SAPNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SAPNameLabel.Location = new System.Drawing.Point(10, 210);
+            this.SAPNameLabel.Name = "SAPNameLabel";
+            this.SAPNameLabel.Size = new System.Drawing.Size(138, 23);
+            this.SAPNameLabel.TabIndex = 5;
+            this.SAPNameLabel.Text = "SAP naziv:";
+            this.SAPNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label6
+            // CodeLabel
             // 
-            this.label6.Location = new System.Drawing.Point(93, 220);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 23);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "label6";
+            this.CodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.CodeLabel.Location = new System.Drawing.Point(413, 30);
+            this.CodeLabel.Name = "CodeLabel";
+            this.CodeLabel.Size = new System.Drawing.Size(116, 23);
+            this.CodeLabel.TabIndex = 6;
+            this.CodeLabel.Text = "SAP Sifra:";
+            this.CodeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label7
+            // DateActivationLabel
             // 
-            this.label7.Location = new System.Drawing.Point(498, 262);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 23);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "label7";
+            this.DateActivationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.DateActivationLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.DateActivationLabel.Location = new System.Drawing.Point(369, 73);
+            this.DateActivationLabel.Name = "DateActivationLabel";
+            this.DateActivationLabel.Size = new System.Drawing.Size(160, 23);
+            this.DateActivationLabel.TabIndex = 7;
+            this.DateActivationLabel.Text = "DAT aktivacije:";
             // 
-            // label8
+            // FondLabel
             // 
-            this.label8.Location = new System.Drawing.Point(512, 365);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 23);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "label8";
+            this.FondLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.FondLabel.Location = new System.Drawing.Point(400, 120);
+            this.FondLabel.Name = "FondLabel";
+            this.FondLabel.Size = new System.Drawing.Size(129, 23);
+            this.FondLabel.TabIndex = 8;
+            this.FondLabel.Text = "EU Fond:";
+            this.FondLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label9
+            // ReceivingLabel
             // 
-            this.label9.Location = new System.Drawing.Point(533, 177);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 23);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "label9";
+            this.ReceivingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ReceivingLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ReceivingLabel.Location = new System.Drawing.Point(390, 163);
+            this.ReceivingLabel.Name = "ReceivingLabel";
+            this.ReceivingLabel.Size = new System.Drawing.Size(139, 23);
+            this.ReceivingLabel.TabIndex = 9;
+            this.ReceivingLabel.Text = "DAT Primke:";
             // 
-            // label10
+            // IPLabel
             // 
-            this.label10.Location = new System.Drawing.Point(537, 55);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 23);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "label10";
+            this.IPLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.IPLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.IPLabel.Location = new System.Drawing.Point(144, 310);
+            this.IPLabel.Name = "IPLabel";
+            this.IPLabel.Size = new System.Drawing.Size(129, 23);
+            this.IPLabel.TabIndex = 10;
+            this.IPLabel.Text = "IP Adresa:";
+            this.IPLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label11
+            // ReceivingDateLabel
             // 
-            this.label11.Location = new System.Drawing.Point(565, 129);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(100, 23);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "label11";
+            this.ReceivingDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ReceivingDateLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ReceivingDateLabel.Location = new System.Drawing.Point(349, 210);
+            this.ReceivingDateLabel.Name = "ReceivingDateLabel";
+            this.ReceivingDateLabel.Size = new System.Drawing.Size(180, 23);
+            this.ReceivingDateLabel.TabIndex = 11;
+            this.ReceivingDateLabel.Text = "DAT Zaprimanja:";
+            // 
+            // InternalBox
+            // 
+            this.InternalBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.InternalBox.Location = new System.Drawing.Point(154, 25);
+            this.InternalBox.Name = "InternalBox";
+            this.InternalBox.Size = new System.Drawing.Size(175, 32);
+            this.InternalBox.TabIndex = 18;
+            // 
+            // ActivationDateBox
+            // 
+            this.ActivationDateBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ActivationDateBox.Location = new System.Drawing.Point(535, 70);
+            this.ActivationDateBox.Name = "ActivationDateBox";
+            this.ActivationDateBox.Size = new System.Drawing.Size(175, 32);
+            this.ActivationDateBox.TabIndex = 19;
+            // 
+            // SAPCodeBox
+            // 
+            this.SAPCodeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SAPCodeBox.Location = new System.Drawing.Point(535, 25);
+            this.SAPCodeBox.Name = "SAPCodeBox";
+            this.SAPCodeBox.Size = new System.Drawing.Size(175, 32);
+            this.SAPCodeBox.TabIndex = 20;
+            // 
+            // SAPNameBox
+            // 
+            this.SAPNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SAPNameBox.Location = new System.Drawing.Point(154, 205);
+            this.SAPNameBox.Name = "SAPNameBox";
+            this.SAPNameBox.Size = new System.Drawing.Size(175, 32);
+            this.SAPNameBox.TabIndex = 21;
+            // 
+            // RIFBox
+            // 
+            this.RIFBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.RIFBox.Location = new System.Drawing.Point(154, 160);
+            this.RIFBox.Name = "RIFBox";
+            this.RIFBox.Size = new System.Drawing.Size(175, 32);
+            this.RIFBox.TabIndex = 22;
+            // 
+            // ProviderBox
+            // 
+            this.ProviderBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ProviderBox.Location = new System.Drawing.Point(154, 115);
+            this.ProviderBox.Name = "ProviderBox";
+            this.ProviderBox.Size = new System.Drawing.Size(175, 32);
+            this.ProviderBox.TabIndex = 23;
+            // 
+            // SerialBox
+            // 
+            this.SerialBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SerialBox.Location = new System.Drawing.Point(154, 70);
+            this.SerialBox.Name = "SerialBox";
+            this.SerialBox.Size = new System.Drawing.Size(175, 32);
+            this.SerialBox.TabIndex = 24;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.checkBox1.Location = new System.Drawing.Point(535, 119);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(24, 24);
+            this.checkBox1.TabIndex = 25;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // ReceivingDateBox
+            // 
+            this.ReceivingDateBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ReceivingDateBox.Location = new System.Drawing.Point(535, 205);
+            this.ReceivingDateBox.Name = "ReceivingDateBox";
+            this.ReceivingDateBox.Size = new System.Drawing.Size(175, 32);
+            this.ReceivingDateBox.TabIndex = 26;
+            // 
+            // RecivingBox
+            // 
+            this.RecivingBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.RecivingBox.Location = new System.Drawing.Point(535, 160);
+            this.RecivingBox.Name = "RecivingBox";
+            this.RecivingBox.Size = new System.Drawing.Size(175, 32);
+            this.RecivingBox.TabIndex = 27;
+            // 
+            // IPBox
+            // 
+            this.IPBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.IPBox.Location = new System.Drawing.Point(279, 307);
+            this.IPBox.Name = "IPBox";
+            this.IPBox.Size = new System.Drawing.Size(175, 32);
+            this.IPBox.TabIndex = 28;
             // 
             // TableFormOprema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(782, 553);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(782, 484);
+            this.Controls.Add(this.IPBox);
+            this.Controls.Add(this.RecivingBox);
+            this.Controls.Add(this.ReceivingDateBox);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.SerialBox);
+            this.Controls.Add(this.ProviderBox);
+            this.Controls.Add(this.RIFBox);
+            this.Controls.Add(this.SAPNameBox);
+            this.Controls.Add(this.SAPCodeBox);
+            this.Controls.Add(this.ActivationDateBox);
+            this.Controls.Add(this.InternalBox);
+            this.Controls.Add(this.ReceivingDateLabel);
+            this.Controls.Add(this.IPLabel);
+            this.Controls.Add(this.ReceivingLabel);
+            this.Controls.Add(this.FondLabel);
+            this.Controls.Add(this.DateActivationLabel);
+            this.Controls.Add(this.CodeLabel);
+            this.Controls.Add(this.SAPNameLabel);
+            this.Controls.Add(this.RIFLabel);
+            this.Controls.Add(this.ProviderLabel);
+            this.Controls.Add(this.SerialLabel);
+            this.Controls.Add(this.InternalLabel);
             this.Controls.Add(this.AddGear);
             this.Name = "TableFormOprema";
             this.Text = "Oprema";
             this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox ReceivingDateBox;
+
+        private System.Windows.Forms.TextBox RecivingBox;
+        private System.Windows.Forms.TextBox IPBox;
+
+        private System.Windows.Forms.CheckBox checkBox1;
+
+        private System.Windows.Forms.TextBox ActivationDateBox;
+        private System.Windows.Forms.TextBox SAPCodeBox;
+        private System.Windows.Forms.TextBox SAPNameBox;
+        private System.Windows.Forms.TextBox RIFBox;
+        private System.Windows.Forms.TextBox ProviderBox;
+        private System.Windows.Forms.TextBox InternalBox;
+        private System.Windows.Forms.TextBox SerialBox;
+
+        private System.Windows.Forms.Label InternalLabel;
+        private System.Windows.Forms.Label SerialLabel;
+        private System.Windows.Forms.Label ProviderLabel;
+        private System.Windows.Forms.Label RIFLabel;
+        private System.Windows.Forms.Label SAPNameLabel;
+        private System.Windows.Forms.Label CodeLabel;
+        private System.Windows.Forms.Label DateActivationLabel;
+        private System.Windows.Forms.Label FondLabel;
+        private System.Windows.Forms.Label ReceivingLabel;
+        private System.Windows.Forms.Label IPLabel;
+        private System.Windows.Forms.Label ReceivingDateLabel;
 
         private System.Windows.Forms.Button AddGear;
 

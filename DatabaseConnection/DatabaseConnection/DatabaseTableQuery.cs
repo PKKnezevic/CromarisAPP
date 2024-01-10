@@ -49,6 +49,9 @@ namespace DatabaseConnection
                 case "MT":
                     entryForm = new TableFormMT();
                     break;
+                case "Oprema":
+                    entryForm = new TableFormOprema();
+                    break;
             }
             entryForm.SetConnection(con);
         }
