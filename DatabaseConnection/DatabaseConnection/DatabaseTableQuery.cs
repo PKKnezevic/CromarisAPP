@@ -34,6 +34,11 @@ namespace DatabaseConnection
 
         private void addEntry_Click(object sender, EventArgs e)
         {
+            if (con == null)
+            {
+                MessageBox.Show("Molim spojite se na željenu bazu prvo!");
+                return;
+            }
             ITableInterface entryForm = null;
             switch (databaseTables.SelectedItem.ToString())
             {
@@ -51,6 +56,10 @@ namespace DatabaseConnection
                     break;
                 case "Oprema":
                     entryForm = new TableFormOprema();
+                    break;
+                case "Zaduzenje":
+                    entryForm = new TableFormZaduzenjec();
+                    
                     break;
             }
             entryForm.SetConnection(con);

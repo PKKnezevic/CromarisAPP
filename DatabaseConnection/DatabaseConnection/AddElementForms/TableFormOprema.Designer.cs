@@ -56,7 +56,6 @@ namespace DatabaseConnection.AddElementForms
             this.ReceivingDateBox = new System.Windows.Forms.TextBox();
             this.RecivingBox = new System.Windows.Forms.TextBox();
             this.IPBox = new System.Windows.Forms.TextBox();
-            this._boxElements = new List<TextBox>();
             this.SuspendLayout();
             // 
             // AddGear
@@ -125,7 +124,7 @@ namespace DatabaseConnection.AddElementForms
             this.CodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.CodeLabel.Location = new System.Drawing.Point(413, 30);
             this.CodeLabel.Name = "CodeLabel";
-            this.CodeLabel.Size = new System.Drawing.Size(116, 23);
+            this.CodeLabel.Size = new System.Drawing.Size(131, 23);
             this.CodeLabel.TabIndex = 6;
             this.CodeLabel.Text = "SAP Sifra:";
             this.CodeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -133,19 +132,19 @@ namespace DatabaseConnection.AddElementForms
             // DateActivationLabel
             // 
             this.DateActivationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.DateActivationLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.DateActivationLabel.Location = new System.Drawing.Point(369, 73);
             this.DateActivationLabel.Name = "DateActivationLabel";
-            this.DateActivationLabel.Size = new System.Drawing.Size(160, 23);
+            this.DateActivationLabel.Size = new System.Drawing.Size(175, 23);
             this.DateActivationLabel.TabIndex = 7;
             this.DateActivationLabel.Text = "DAT aktivacije:";
+            this.DateActivationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FondLabel
             // 
             this.FondLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FondLabel.Location = new System.Drawing.Point(400, 120);
             this.FondLabel.Name = "FondLabel";
-            this.FondLabel.Size = new System.Drawing.Size(129, 23);
+            this.FondLabel.Size = new System.Drawing.Size(144, 23);
             this.FondLabel.TabIndex = 8;
             this.FondLabel.Text = "EU Fond:";
             this.FondLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -153,12 +152,12 @@ namespace DatabaseConnection.AddElementForms
             // ReceivingLabel
             // 
             this.ReceivingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ReceivingLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ReceivingLabel.Location = new System.Drawing.Point(390, 163);
             this.ReceivingLabel.Name = "ReceivingLabel";
-            this.ReceivingLabel.Size = new System.Drawing.Size(139, 23);
+            this.ReceivingLabel.Size = new System.Drawing.Size(154, 23);
             this.ReceivingLabel.TabIndex = 9;
             this.ReceivingLabel.Text = "DAT Primke:";
+            this.ReceivingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // IPLabel
             // 
@@ -166,7 +165,7 @@ namespace DatabaseConnection.AddElementForms
             this.IPLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.IPLabel.Location = new System.Drawing.Point(144, 310);
             this.IPLabel.Name = "IPLabel";
-            this.IPLabel.Size = new System.Drawing.Size(129, 23);
+            this.IPLabel.Size = new System.Drawing.Size(150, 23);
             this.IPLabel.TabIndex = 10;
             this.IPLabel.Text = "IP Adresa:";
             this.IPLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -174,12 +173,12 @@ namespace DatabaseConnection.AddElementForms
             // ReceivingDateLabel
             // 
             this.ReceivingDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ReceivingDateLabel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ReceivingDateLabel.Location = new System.Drawing.Point(349, 210);
             this.ReceivingDateLabel.Name = "ReceivingDateLabel";
-            this.ReceivingDateLabel.Size = new System.Drawing.Size(180, 23);
+            this.ReceivingDateLabel.Size = new System.Drawing.Size(195, 23);
             this.ReceivingDateLabel.TabIndex = 11;
             this.ReceivingDateLabel.Text = "DAT Zaprimanja:";
+            this.ReceivingDateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // InternalBox
             // 
@@ -192,7 +191,7 @@ namespace DatabaseConnection.AddElementForms
             // ActivationDateBox
             // 
             this.ActivationDateBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ActivationDateBox.Location = new System.Drawing.Point(535, 70);
+            this.ActivationDateBox.Location = new System.Drawing.Point(550, 70);
             this.ActivationDateBox.Name = "ActivationDateBox";
             this.ActivationDateBox.Size = new System.Drawing.Size(175, 32);
             this.ActivationDateBox.TabIndex = 19;
@@ -200,7 +199,7 @@ namespace DatabaseConnection.AddElementForms
             // SAPCodeBox
             // 
             this.SAPCodeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.SAPCodeBox.Location = new System.Drawing.Point(535, 25);
+            this.SAPCodeBox.Location = new System.Drawing.Point(550, 25);
             this.SAPCodeBox.Name = "SAPCodeBox";
             this.SAPCodeBox.Size = new System.Drawing.Size(175, 32);
             this.SAPCodeBox.TabIndex = 20;
@@ -240,7 +239,7 @@ namespace DatabaseConnection.AddElementForms
             // checkBox1
             // 
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox1.Location = new System.Drawing.Point(535, 119);
+            this.checkBox1.Location = new System.Drawing.Point(550, 119);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(24, 24);
             this.checkBox1.TabIndex = 25;
@@ -249,7 +248,7 @@ namespace DatabaseConnection.AddElementForms
             // ReceivingDateBox
             // 
             this.ReceivingDateBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ReceivingDateBox.Location = new System.Drawing.Point(535, 205);
+            this.ReceivingDateBox.Location = new System.Drawing.Point(550, 205);
             this.ReceivingDateBox.Name = "ReceivingDateBox";
             this.ReceivingDateBox.Size = new System.Drawing.Size(175, 32);
             this.ReceivingDateBox.TabIndex = 26;
@@ -257,7 +256,7 @@ namespace DatabaseConnection.AddElementForms
             // RecivingBox
             // 
             this.RecivingBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.RecivingBox.Location = new System.Drawing.Point(535, 160);
+            this.RecivingBox.Location = new System.Drawing.Point(550, 160);
             this.RecivingBox.Name = "RecivingBox";
             this.RecivingBox.Size = new System.Drawing.Size(175, 32);
             this.RecivingBox.TabIndex = 27;
@@ -265,7 +264,7 @@ namespace DatabaseConnection.AddElementForms
             // IPBox
             // 
             this.IPBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.IPBox.Location = new System.Drawing.Point(279, 307);
+            this.IPBox.Location = new System.Drawing.Point(300, 305);
             this.IPBox.Name = "IPBox";
             this.IPBox.Size = new System.Drawing.Size(175, 32);
             this.IPBox.TabIndex = 28;

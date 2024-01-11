@@ -14,6 +14,8 @@ namespace DatabaseConnection.AddElementForms
         public TableFormOprema()
         {
             InitializeComponent();
+            Show(Parent);
+            _boxElements = new List<TextBox>();
             FillBoxElements(_boxElements);
         }
 
