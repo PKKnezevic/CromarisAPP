@@ -8,25 +8,11 @@ namespace DatabaseConnection.AddElementForms
     public partial class TableFormMT : Form, ITableInterface
     {
         private SqlConnection _connection;
-        
+
         public TableFormMT()
         {
             InitializeComponent();
             Show(Parent);
-        }
-        private void addMT_Click(object sender, EventArgs e)
-        {
-            string query = "INSERT INTO MT VALUES (@Value1, @Value2)";
-            SqlCommand insertIntoTable = new SqlCommand(query, _connection);
-            if (SAPbox.Text.Equals("") | NameBox.Text.Equals(""))
-            {
-                MessageBox.Show("Molim unseite polja!");
-                return;
-            }
-            AddElementsToTable(insertIntoTable);
-            MessageBox.Show("Uspješno dodan zapis!");
-            NameBox.Text = "";
-            SAPbox.Text = "";
         }
 
         public void SetConnection(SqlConnection connection)
@@ -41,5 +27,20 @@ namespace DatabaseConnection.AddElementForms
             sqlCommand.ExecuteNonQuery();
         }
 
+        private void addMT_Click(object sender, EventArgs e)
+        {
+            var query = "INSERT INTO MT VALUES (@Value1, @Value2)";
+            var insertIntoTable = new SqlCommand(query, _connection);
+            if (SAPbox.Text.Equals("") | NameBox.Text.Equals(""))
+            {
+                MessageBox.Show("Molim unseite polja!");
+                return;
+            }
+
+            AddElementsToTable(insertIntoTable);
+            MessageBox.Show("Uspješno dodan zapis!");
+            NameBox.Text = "";
+            SAPbox.Text = "";
+        }
     }
 }

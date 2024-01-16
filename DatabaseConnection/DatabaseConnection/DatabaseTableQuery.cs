@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
 using System.Data;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using DatabaseConnection.AddElementForms;
 using DatabaseConnection.Interfaces;
@@ -11,9 +11,10 @@ namespace DatabaseConnection
 {
     public partial class DatabaseTableQuery : Form
     {
+        private SqlDataAdapter _adapter;
         private SqlConnection _con;
         private DataTable _dataTable;
-        
+
         public DatabaseTableQuery()
         {
             InitializeComponent();
@@ -28,9 +29,9 @@ namespace DatabaseConnection
             var query = "Select * from " + databaseTables.SelectedItem;
 
             //Execute the given command
-            var adapter = new SqlDataAdapter(query, _con);
+            _adapter = new SqlDataAdapter(query, _con);
             _dataTable = new DataTable(databaseTables.SelectedItem.ToString());
-            adapter.Fill(_dataTable);
+            _adapter.Fill(_dataTable);
             databaseView.DataSource = _dataTable;
             var list = PopulateColumnPicker();
             columnPickerCBox.DataSource = list;
@@ -44,6 +45,7 @@ namespace DatabaseConnection
                 MessageBox.Show("Molim spojite se na željenu bazu prvo!");
                 return;
             }
+
             ITableInterface entryForm = null;
             switch (databaseTables.SelectedItem.ToString())
             {
@@ -66,43 +68,59 @@ namespace DatabaseConnection
                     entryForm = new TableFormZaduzenjec();
                     break;
             }
+
             entryForm.SetConnection(_con);
         }
 
-        private List<String> PopulateColumnPicker()
+        private List<string> PopulateColumnPicker()
         {
-            List<String> list = new List<String>();
-            foreach (DataGridViewTextBoxColumn column in databaseView.Columns)
-            {
-                list.Add(column.Name);
-            }
+            var list = new List<string>();
+            foreach (DataGridViewTextBoxColumn column in databaseView.Columns) list.Add(column.Name);
 
             return list;
         }
 
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
-            DataView dvTable = _dataTable.DefaultView;
-            if (searchBox.Text != "")
-            {
+            var dvTable = _dataTable.DefaultView;
+            if (searchBox.Text != "" && Regex.IsMatch(searchBox.Text,@"[a-zA-Z]"))
                 try
                 {
                     dvTable.RowFilter = columnPickerCBox.Text + " Like '%" + searchBox.Text + "%'";
                 }
-                catch (Exception exception)
+                catch (EvaluateException exception)
                 {
-                    string query = "SELECT * FROM " + databaseTables.SelectedItem + " WHERE "
-                                   +columnPickerCBox.Text+"="+searchBox.Text;
-                    var adapter = new SqlDataAdapter(query, _con);
-                    var newDt = new DataTable();
-                    adapter.Fill(newDt);
-                    databaseView.DataSource = newDt;
+                    SearchUsingInt();
+                    //Console exception log
+                    //Console.WriteLine(exception);
                 }
-            }
-            else
+            else 
+                ResetDataView();
+        }
+
+        private void SearchUsingInt()
+        {
+            
+            if (Int32.TryParse(searchBox.Text, out _))
             {
-                databaseView.DataSource = _dataTable;
-            }   
+                var query = "SELECT * FROM " + databaseTables.SelectedItem + " WHERE "
+                            + columnPickerCBox.Text + "=" + searchBox.Text;
+                _adapter = new SqlDataAdapter(query, _con);
+                var newDt = new DataTable();
+                _adapter.Fill(newDt);
+                databaseView.DataSource = newDt;
+            }
+        }
+
+        private void ResetDataView()
+        {
+            databaseView.DataSource = _dataTable;
+        }
+
+        private void databaseView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            searchBox.Text = "";
+            ResetDataView();
         }
     }
 }

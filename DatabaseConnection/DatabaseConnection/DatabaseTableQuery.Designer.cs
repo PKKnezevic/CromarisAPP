@@ -55,13 +55,18 @@ namespace DatabaseConnection
             // 
             // databaseView
             // 
+            this.databaseView.AllowUserToAddRows = false;
+            this.databaseView.AllowUserToDeleteRows = false;
+            this.databaseView.AllowUserToOrderColumns = true;
             this.databaseView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.databaseView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.databaseView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.databaseView.Location = new System.Drawing.Point(0, 0);
             this.databaseView.Name = "databaseView";
             this.databaseView.RowTemplate.Height = 24;
             this.databaseView.Size = new System.Drawing.Size(776, 408);
             this.databaseView.TabIndex = 0;
+            this.databaseView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.databaseView_CellContentClick);
             // 
             // connectToDB
             // 

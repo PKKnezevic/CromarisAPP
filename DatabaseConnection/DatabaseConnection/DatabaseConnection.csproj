@@ -48,70 +48,70 @@
     </ItemGroup>
     <ItemGroup>
         <Compile Include="AddElementForms\TableFormLocation.cs">
-          <SubType>Form</SubType>
+            <SubType>Form</SubType>
         </Compile>
         <Compile Include="AddElementForms\TableFormLocation.Designer.cs">
-          <DependentUpon>TableFormLocation.cs</DependentUpon>
+            <DependentUpon>TableFormLocation.cs</DependentUpon>
         </Compile>
         <Compile Include="AddElementForms\TableFormMT.cs">
-          <SubType>Form</SubType>
+            <SubType>Form</SubType>
         </Compile>
         <Compile Include="AddElementForms\TableFormMT.Designer.cs">
-          <DependentUpon>TableFormMT.cs</DependentUpon>
+            <DependentUpon>TableFormMT.cs</DependentUpon>
         </Compile>
         <Compile Include="AddElementForms\TableFormOprema.cs">
-          <SubType>Form</SubType>
+            <SubType>Form</SubType>
         </Compile>
         <Compile Include="AddElementForms\TableFormOprema.Designer.cs">
-          <DependentUpon>TableFormOprema.cs</DependentUpon>
+            <DependentUpon>TableFormOprema.cs</DependentUpon>
         </Compile>
         <Compile Include="AddElementForms\TableFormRIF.cs">
-          <SubType>Form</SubType>
+            <SubType>Form</SubType>
         </Compile>
         <Compile Include="AddElementForms\TableFormRIF.Designer.cs">
-          <DependentUpon>TableFormRIF.cs</DependentUpon>
+            <DependentUpon>TableFormRIF.cs</DependentUpon>
         </Compile>
         <Compile Include="AddElementForms\TableFormUser.cs">
-          <SubType>Form</SubType>
+            <SubType>Form</SubType>
         </Compile>
         <Compile Include="AddElementForms\TableFormUser.Designer.cs">
-          <DependentUpon>TableFormUser.cs</DependentUpon>
+            <DependentUpon>TableFormUser.cs</DependentUpon>
         </Compile>
         <Compile Include="AddElementForms\TableFormZaduzenjec.cs">
-          <SubType>Form</SubType>
+            <SubType>Form</SubType>
         </Compile>
         <Compile Include="AddElementForms\TableFormZaduzenjec.Designer.cs">
-          <DependentUpon>TableFormZaduzenjec.cs</DependentUpon>
+            <DependentUpon>TableFormZaduzenjec.cs</DependentUpon>
         </Compile>
         <Compile Include="DatabaseTableQuery.cs">
-          <SubType>Form</SubType>
+            <SubType>Form</SubType>
         </Compile>
         <Compile Include="DatabaseTableQuery.Designer.cs">
-          <DependentUpon>DatabaseTableQuery.cs</DependentUpon>
+            <DependentUpon>DatabaseTableQuery.cs</DependentUpon>
         </Compile>
-        <Compile Include="Interfaces\ITableInterface.cs" />
+        <Compile Include="Interfaces\ITableInterface.cs"/>
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <EmbeddedResource Include="AddElementForms\TableFormLocation.resx">
-          <DependentUpon>TableFormLocation.cs</DependentUpon>
+            <DependentUpon>TableFormLocation.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="AddElementForms\TableFormMT.resx">
-          <DependentUpon>TableFormMT.cs</DependentUpon>
+            <DependentUpon>TableFormMT.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="AddElementForms\TableFormOprema.resx">
-          <DependentUpon>TableFormOprema.cs</DependentUpon>
+            <DependentUpon>TableFormOprema.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="AddElementForms\TableFormRIF.resx">
-          <DependentUpon>TableFormRIF.cs</DependentUpon>
+            <DependentUpon>TableFormRIF.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="AddElementForms\TableFormUser.resx">
-          <DependentUpon>TableFormUser.cs</DependentUpon>
+            <DependentUpon>TableFormUser.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="AddElementForms\TableFormZaduzenjec.resx">
-          <DependentUpon>TableFormZaduzenjec.cs</DependentUpon>
+            <DependentUpon>TableFormZaduzenjec.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="DatabaseTableQuery.resx">
-          <DependentUpon>DatabaseTableQuery.cs</DependentUpon>
+            <DependentUpon>DatabaseTableQuery.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>
@@ -122,7 +122,7 @@
             <AutoGen>True</AutoGen>
             <DependentUpon>Resources.resx</DependentUpon>
         </Compile>
-        <None Include="DBiconpng.ico" />
+        <None Include="DBiconpng.ico"/>
         <None Include="Properties\Settings.settings">
             <Generator>SettingsSingleFileGenerator</Generator>
             <LastGenOutput>Settings.Designer.cs</LastGenOutput>
