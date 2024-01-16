@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Runtime.Remoting.Messaging;
+using System.Windows.Forms;
 using Microsoft.Win32;
 
 namespace DatabaseConnection.AddElementForms
@@ -139,6 +140,8 @@ namespace DatabaseConnection.AddElementForms
             this.datZaduzenjaDTP.Name = "datZaduzenjaDTP";
             this.datZaduzenjaDTP.Size = new System.Drawing.Size(231, 32);
             this.datZaduzenjaDTP.TabIndex = 9;
+            this.datZaduzenjaDTP.Format = DateTimePickerFormat.Custom;
+            this.datZaduzenjaDTP.CustomFormat = "yyyy-MM-dd";
             // 
             // datRazduzenjaDTP
             // 
@@ -147,6 +150,8 @@ namespace DatabaseConnection.AddElementForms
             this.datRazduzenjaDTP.Name = "datRazduzenjaDTP";
             this.datRazduzenjaDTP.Size = new System.Drawing.Size(233, 32);
             this.datRazduzenjaDTP.TabIndex = 10;
+            this.datRazduzenjaDTP.Format = DateTimePickerFormat.Custom;
+            this.datRazduzenjaDTP.CustomFormat = "yyyy-MM-dd";
             // 
             // cadrovskiBox
             // 

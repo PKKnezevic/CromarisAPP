@@ -88,14 +88,7 @@
         <Compile Include="DatabaseTableQuery.Designer.cs">
           <DependentUpon>DatabaseTableQuery.cs</DependentUpon>
         </Compile>
-        <Compile Include="Interfaces\IComboBoxStringRep.cs" />
         <Compile Include="Interfaces\ITableInterface.cs" />
-        <Compile Include="Models\Korisnik.cs" />
-        <Compile Include="Models\Lokacija.cs" />
-        <Compile Include="Models\MT.cs" />
-        <Compile Include="Models\Oprema.cs" />
-        <Compile Include="Models\RIF.cs" />
-        <Compile Include="Models\Zaduzenja.cs" />
         <Compile Include="Program.cs"/>
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <EmbeddedResource Include="AddElementForms\TableFormLocation.resx">

@@ -81,6 +81,7 @@ namespace DatabaseConnection.AddElementForms
             this.SendDataToKorisnik.TabIndex = 4;
             this.SendDataToKorisnik.Text = "Dodaj";
             this.SendDataToKorisnik.UseVisualStyleBackColor = true;
+            this.SendDataToKorisnik.Click += new System.EventHandler(this.SendDataToKorisnik_Click);
             // 
             // TableFormUser
             // 

@@ -16,7 +16,7 @@ namespace DatabaseConnection.AddElementForms
 
         private void AddLocationButton_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO Korisnik VALUES (@Value1, @Value2)";
+            string query = "INSERT INTO Lokacija VALUES (@Value1, @Value2)";
             SqlCommand insertIntoTable = new SqlCommand(query, _connection);
             if (IDBox.Text.Equals("") | NameBox.Text.Equals(""))
             {
@@ -38,6 +38,7 @@ namespace DatabaseConnection.AddElementForms
         {
             sqlCommand.Parameters.AddWithValue("@Value1", IDBox.Text);
             sqlCommand.Parameters.AddWithValue("@Value2", NameBox.Text);
+            sqlCommand.ExecuteNonQuery();
         }
     }
 }

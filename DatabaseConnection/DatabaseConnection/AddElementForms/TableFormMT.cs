@@ -16,7 +16,7 @@ namespace DatabaseConnection.AddElementForms
         }
         private void addMT_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO Korisnik VALUES (@Value1, @Value2)";
+            string query = "INSERT INTO MT VALUES (@Value1, @Value2)";
             SqlCommand insertIntoTable = new SqlCommand(query, _connection);
             if (SAPbox.Text.Equals("") | NameBox.Text.Equals(""))
             {

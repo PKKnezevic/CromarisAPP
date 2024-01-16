@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 
 namespace DatabaseConnection.AddElementForms
 {
@@ -52,6 +53,7 @@ namespace DatabaseConnection.AddElementForms
             this.AddUser.TabIndex = 0;
             this.AddUser.Text = "Dodaj";
             this.AddUser.UseVisualStyleBackColor = true;
+            this.AddUser.Click += new System.EventHandler(this.AddUser_Click);
             // 
             // label1
             // 

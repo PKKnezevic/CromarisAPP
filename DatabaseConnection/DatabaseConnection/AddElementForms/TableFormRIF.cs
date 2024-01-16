@@ -16,7 +16,7 @@ namespace DatabaseConnection.AddElementForms
 
         private void AddUser_Click(object sender, EventArgs e)
         {
-            string query = "INSERT INTO Korisnik (Narudzbenica,Racun,DMS_BR_Dokumenta,Investicijski_nalog)VALUES (@Value1, @Value2, @Value3, @Value4)";
+            string query = "Insert into RIF (Narudzbenica,Racun,DMS_BR_Dokumenta,Investicijski_nalog)VALUES (@Value1, @Value2, @Value3, @Value4)";
             SqlCommand insertIntoTable = new SqlCommand(query, _connection);
             if (OrderBox.Text.Equals(""))
             {
@@ -35,7 +35,7 @@ namespace DatabaseConnection.AddElementForms
         {
             sqlCommand.Parameters.AddWithValue("@Value1", OrderBox.Text);
             sqlCommand.Parameters.AddWithValue("@Value2", ReceiptBox.Text);
-            sqlCommand.Parameters.AddWithValue("@Value3", DMSBox.Text);
+            sqlCommand.Parameters.AddWithValue("@Value3", Int32.Parse(DMSBox.Text));
             sqlCommand.Parameters.AddWithValue("@Value4", InvestmentBox.Text);
             sqlCommand.ExecuteNonQuery();
         }

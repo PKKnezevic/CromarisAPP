@@ -46,16 +46,16 @@ namespace DatabaseConnection.AddElementForms
             this.IPLabel = new System.Windows.Forms.Label();
             this.ReceivingDateLabel = new System.Windows.Forms.Label();
             this.InternalBox = new System.Windows.Forms.TextBox();
-            this.ActivationDateBox = new System.Windows.Forms.TextBox();
             this.SAPCodeBox = new System.Windows.Forms.TextBox();
             this.SAPNameBox = new System.Windows.Forms.TextBox();
             this.RIFBox = new System.Windows.Forms.TextBox();
             this.ProviderBox = new System.Windows.Forms.TextBox();
             this.SerialBox = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.ReceivingDateBox = new System.Windows.Forms.TextBox();
-            this.RecivingBox = new System.Windows.Forms.TextBox();
             this.IPBox = new System.Windows.Forms.TextBox();
+            this.zaprimanjeDTP = new System.Windows.Forms.DateTimePicker();
+            this.primkaDTP = new System.Windows.Forms.DateTimePicker();
+            this.aktivacijaDTP = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // AddGear
@@ -68,6 +68,7 @@ namespace DatabaseConnection.AddElementForms
             this.AddGear.TabIndex = 0;
             this.AddGear.Text = "Dodaj";
             this.AddGear.UseVisualStyleBackColor = true;
+            this.AddGear.Click += new System.EventHandler(this.AddGear_Click);
             // 
             // InternalLabel
             // 
@@ -188,14 +189,6 @@ namespace DatabaseConnection.AddElementForms
             this.InternalBox.Size = new System.Drawing.Size(175, 32);
             this.InternalBox.TabIndex = 18;
             // 
-            // ActivationDateBox
-            // 
-            this.ActivationDateBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ActivationDateBox.Location = new System.Drawing.Point(550, 70);
-            this.ActivationDateBox.Name = "ActivationDateBox";
-            this.ActivationDateBox.Size = new System.Drawing.Size(175, 32);
-            this.ActivationDateBox.TabIndex = 19;
-            // 
             // SAPCodeBox
             // 
             this.SAPCodeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -245,22 +238,6 @@ namespace DatabaseConnection.AddElementForms
             this.checkBox1.TabIndex = 25;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // ReceivingDateBox
-            // 
-            this.ReceivingDateBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ReceivingDateBox.Location = new System.Drawing.Point(550, 205);
-            this.ReceivingDateBox.Name = "ReceivingDateBox";
-            this.ReceivingDateBox.Size = new System.Drawing.Size(175, 32);
-            this.ReceivingDateBox.TabIndex = 26;
-            // 
-            // RecivingBox
-            // 
-            this.RecivingBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.RecivingBox.Location = new System.Drawing.Point(550, 160);
-            this.RecivingBox.Name = "RecivingBox";
-            this.RecivingBox.Size = new System.Drawing.Size(175, 32);
-            this.RecivingBox.TabIndex = 27;
-            // 
             // IPBox
             // 
             this.IPBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -269,21 +246,51 @@ namespace DatabaseConnection.AddElementForms
             this.IPBox.Size = new System.Drawing.Size(175, 32);
             this.IPBox.TabIndex = 28;
             // 
+            // zaprimanjeDTP
+            // 
+            this.zaprimanjeDTP.CustomFormat = "yyyy-MM-dd";
+            this.zaprimanjeDTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.zaprimanjeDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.zaprimanjeDTP.Location = new System.Drawing.Point(550, 203);
+            this.zaprimanjeDTP.Name = "zaprimanjeDTP";
+            this.zaprimanjeDTP.Size = new System.Drawing.Size(200, 32);
+            this.zaprimanjeDTP.TabIndex = 29;
+            // 
+            // primkaDTP
+            // 
+            this.primkaDTP.CustomFormat = "yyyy-MM-dd";
+            this.primkaDTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.primkaDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.primkaDTP.Location = new System.Drawing.Point(550, 158);
+            this.primkaDTP.Name = "primkaDTP";
+            this.primkaDTP.Size = new System.Drawing.Size(200, 32);
+            this.primkaDTP.TabIndex = 30;
+            // 
+            // aktivacijaDTP
+            // 
+            this.aktivacijaDTP.CustomFormat = "yyyy-MM-dd";
+            this.aktivacijaDTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.aktivacijaDTP.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.aktivacijaDTP.Location = new System.Drawing.Point(550, 68);
+            this.aktivacijaDTP.Name = "aktivacijaDTP";
+            this.aktivacijaDTP.Size = new System.Drawing.Size(200, 32);
+            this.aktivacijaDTP.TabIndex = 31;
+            // 
             // TableFormOprema
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(782, 484);
+            this.Controls.Add(this.aktivacijaDTP);
+            this.Controls.Add(this.primkaDTP);
+            this.Controls.Add(this.zaprimanjeDTP);
             this.Controls.Add(this.IPBox);
-            this.Controls.Add(this.RecivingBox);
-            this.Controls.Add(this.ReceivingDateBox);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.SerialBox);
             this.Controls.Add(this.ProviderBox);
             this.Controls.Add(this.RIFBox);
             this.Controls.Add(this.SAPNameBox);
             this.Controls.Add(this.SAPCodeBox);
-            this.Controls.Add(this.ActivationDateBox);
             this.Controls.Add(this.InternalBox);
             this.Controls.Add(this.ReceivingDateLabel);
             this.Controls.Add(this.IPLabel);
@@ -303,14 +310,14 @@ namespace DatabaseConnection.AddElementForms
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.TextBox ReceivingDateBox;
+        private System.Windows.Forms.DateTimePicker zaprimanjeDTP;
+        private System.Windows.Forms.DateTimePicker primkaDTP;
+        private System.Windows.Forms.DateTimePicker aktivacijaDTP;
 
-        private System.Windows.Forms.TextBox RecivingBox;
         private System.Windows.Forms.TextBox IPBox;
 
         private System.Windows.Forms.CheckBox checkBox1;
 
-        private System.Windows.Forms.TextBox ActivationDateBox;
         private System.Windows.Forms.TextBox SAPCodeBox;
         private System.Windows.Forms.TextBox SAPNameBox;
         private System.Windows.Forms.TextBox RIFBox;
