@@ -75,7 +75,7 @@ namespace DatabaseConnection
         private List<string> PopulateColumnPicker()
         {
             var list = new List<string>();
-            foreach (DataGridViewTextBoxColumn column in databaseView.Columns) list.Add(column.Name);
+            foreach (DataGridViewColumn column in databaseView.Columns) list.Add(column.Name);
 
             return list;
         }
