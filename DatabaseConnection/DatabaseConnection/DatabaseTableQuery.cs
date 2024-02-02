@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Text.RegularExpressions;
+using System.Linq;
 using System.Windows.Forms;
 using DatabaseConnection.AddElementForms;
 using DatabaseConnection.Interfaces;
@@ -76,25 +76,22 @@ namespace DatabaseConnection
         {
             var list = new List<string>();
             foreach (DataGridViewColumn column in databaseView.Columns) list.Add(column.Name);
-
             return list;
         }
 
         private void searchBox_TextChanged(object sender, EventArgs e)
         {
             var dvTable = _dataTable.DefaultView;
-            if (searchBox.Text != "" && Regex.IsMatch(searchBox.Text,@"[a-zA-Z]"))
+            if (searchBox.Text != "" && searchBox.Text.All(char.IsLetterOrDigit))
                 try
                 {
-                    dvTable.RowFilter = columnPickerCBox.Text + " Like '%" + searchBox.Text + "%'";
-                }
-                catch (EvaluateException exception)
-                {
+                    dvTable.RowFilter = columnPickerCBox.Text.ToString() + " Like '%" + searchBox.Text.ToString() + "%'";
+                } catch (EvaluateException exception) {
                     SearchUsingInt();
                     //Console exception log
                     //Console.WriteLine(exception);
                 }
-            else 
+            else
                 ResetDataView();
         }
 
@@ -116,7 +113,7 @@ namespace DatabaseConnection
         {
             databaseView.DataSource = _dataTable;
         }
-
+        
         private void databaseView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             searchBox.Text = "";

@@ -75,19 +75,5 @@ namespace DatabaseConnection.AddElementForms
             list.Add(IPBox);
             list.Add(zaprimanjeDTP);
         }
-
-        /*
-        private bool CheckBoxes()
-        {
-            foreach (var box in _boxElements)
-            {
-                if (box.Text.Equals(""))
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-        */
     }
 }
